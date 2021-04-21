@@ -3,7 +3,7 @@ defmodule Inmana.Supplies.Get do
 
   def call(uuid) do
     case Repo.get(Supply, uuid) do
-      nil -> {:error, %{result: "Supply not found.", status: :bad_request}}
+      nil -> {:error, %{result: "Supply not found.", status: :not_found}}
       supply -> {:ok, supply}
     end
   end
