@@ -7,6 +7,7 @@ defmodule Inmana.Supply do
 
   # Set our schema primary key to be and autogen. uuid
   @primary_key {:id, :binary_id, autogenerate: true}
+  @foreign_key_type :binary_id
 
   @required_params [:description, :expiration_date, :responsible, :restaurant_id]
 
