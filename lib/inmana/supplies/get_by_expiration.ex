@@ -10,7 +10,8 @@ defmodule Inmana.Supplies.GetByExpiration do
 
     query =
       from supply in Supply,
-        where: supply.expiration_date >= ^bow and supply.expiration_date <= ^eow
+        where: supply.expiration_date >= ^bow and supply.expiration_date <= ^eow,
+        preload: [:restaurant]
 
     query
     |> Repo.all()
