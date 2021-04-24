@@ -1,5 +1,6 @@
 defmodule Inmana.RestaurantsTest do
-  use Inmana.DataCase, async: true
+  # Use the data sandbox
+  use Inmana.DataCase
 
   alias Inmana.{Repo, Restaurant}
 
