@@ -5,7 +5,7 @@ defmodule Inmana.RestaurantsTest do
   alias Inmana.{Repo, Restaurant}
 
   describe "changeset/1" do
-    test "should return a changeset on valid inputs" do
+    test "should return a valid changeset on valid inputs" do
       params = %{name: "TestRestaurant", email: "test@rest.com"}
 
       response = Restaurant.changeset(params)
@@ -35,7 +35,7 @@ defmodule Inmana.RestaurantsTest do
       assert !mail_response.valid?
     end
 
-    test "should throw an error on e-mail collision" do
+    test "should return an invalid changeset on e-mail collision" do
       user_data = %{name: "TestRestaurant1", email: "test@rest.com"}
       imposter_data = %{name: "TestRestaurant2", email: "test@rest.com"}
 
