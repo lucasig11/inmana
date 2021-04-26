@@ -9,5 +9,6 @@ defmodule Inmana.Supplies.List do
 
     query
     |> Repo.all()
+    |> Enum.sort_by(fn %Supply{expiration_date: date} -> date end)
   end
 end
