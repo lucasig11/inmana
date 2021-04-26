@@ -11,7 +11,7 @@ defmodule Inmana.Supply do
 
   @required_params [:description, :expiration_date, :responsible, :restaurant_id]
 
-  @derive {Jason.Encoder, only: @required_params ++ [:id]}
+  @derive {Jason.Encoder, only: @required_params ++ [:id, :updated_at]}
 
   # Map migration fields
   schema "supplies" do
