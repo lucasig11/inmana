@@ -45,7 +45,9 @@ defmodule Inmana.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:bamboo, "~> 2.1.0"},
-      {:excoveralls, "~> 0.10", only: :test}
+      {:excoveralls, "~> 0.10", only: :test},
+      {:cors_plug, "~> 2.0"},
+      {:comeonin, "~> 2.4"}
     ]
   end
 
