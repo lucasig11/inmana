@@ -11,6 +11,7 @@ defmodule InmanaWeb.Router do
     get "/", WelcomeController, :index
 
     post "/restaurants", RestaurantsController, :create
+    get "/restaurants", RestaurantsController, :index
 
     # creates all the default API REST routes
     resources "/supplies", SuppliesController, only: [:create, :show]
