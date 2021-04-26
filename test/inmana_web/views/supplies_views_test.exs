@@ -7,7 +7,7 @@ defmodule InmanaWeb.SuppliesViewTest do
   alias InmanaWeb.SuppliesView
 
   defp mock_restaurant(conn) do
-    params = %{name: "TestRestaurant", email: "test@rest.com"}
+    params = %{name: "TestRestaurant", email: "test@rest.com", password: "testpass"}
 
     conn
     |> post(Routes.restaurants_path(conn, :create, params))

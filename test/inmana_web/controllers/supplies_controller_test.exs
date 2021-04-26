@@ -2,7 +2,7 @@ defmodule InmanaWeb.SuppliesControllerTest do
   use InmanaWeb.ConnCase, async: true
 
   defp mock_restaurant(conn) do
-    params = %{name: "TestRestaurant", email: "test@rest.com"}
+    params = %{name: "TestRestaurant", email: "test@rest.com", password: "testpassword"}
 
     conn
     |> post(Routes.restaurants_path(conn, :create, params))

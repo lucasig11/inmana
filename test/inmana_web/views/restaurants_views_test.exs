@@ -8,7 +8,7 @@ defmodule InmanaWeb.RestaurantsViewTest do
 
   describe "render/2" do
     test "renders create.json" do
-      params = %{name: "TestRestaurant", email: "test@rest.com"}
+      params = %{name: "TestRestaurant", email: "test@rest.com", password: "testpass"}
       {:ok, restaurant} = Inmana.create_restaurant(params)
 
       response = render(RestaurantsView, "create.json", restaurant: restaurant)
@@ -17,8 +17,9 @@ defmodule InmanaWeb.RestaurantsViewTest do
                message: "Restaurant succesfully registered!",
                restaurant: %Restaurant{
                  email: "test@rest.com",
-                 id: _id,
-                 name: "TestRestaurant"
+                 id: _,
+                 name: "TestRestaurant",
+                 password: _
                }
              } = response
     end

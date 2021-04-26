@@ -3,7 +3,7 @@ defmodule InmanaWeb.RestaurantsControllerTest do
 
   describe "create/2" do
     test "should create the user with valid inputs", %{conn: conn} do
-      params = %{name: "TestRestaurant", email: "test@rest.com"}
+      params = %{name: "TestRestaurant", email: "test@rest.com", password: "testpassword"}
 
       response =
         conn
