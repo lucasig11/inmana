@@ -1,4 +1,4 @@
-defmodule Inmana.Restaurants.GetSupplies do
+defmodule Inmana.Supplies.List do
   import Ecto.Query
   alias Inmana.{Repo, Supply}
 

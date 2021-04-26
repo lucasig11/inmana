@@ -14,7 +14,7 @@ defmodule InmanaWeb.Router do
     get "/restaurants", RestaurantsController, :index
 
     # creates all the default API REST routes
-    resources "/supplies", SuppliesController, only: [:create, :show]
+    resources "/supplies", SuppliesController, only: [:create, :show, :index]
   end
 
   # Enables LiveDashboard only for development

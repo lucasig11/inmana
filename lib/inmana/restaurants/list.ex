@@ -1,4 +1,4 @@
-defmodule Inmana.Restaurants.Get do
+defmodule Inmana.Restaurants.List do
   import Ecto.Query
   alias Inmana.{Repo, Restaurant}
 
